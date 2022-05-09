@@ -4,7 +4,6 @@ import AppLayout from '@/layout/app-layout.vue'
 import Page404Layout from '@/layout/page-404-layout.vue'
 
 import RouteViewComponent from './route-view.vue'
-import UIRoute from '@/pages/admin/ui/route'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -32,14 +31,6 @@ const routes: Array<RouteRecordRaw> = [
             component: () => import('@/pages/admin/statistics/charts/Charts.vue'),
             meta: {
               wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Charts',
-            },
-          },
-          {
-            name: 'progress-bars',
-            path: 'progress-bars',
-            component: () => import('@/pages/admin/statistics/progress-bars/ProgressBars.vue'),
-            meta: {
-              wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Progress-Bars',
             },
           },
         ],
@@ -154,7 +145,6 @@ const routes: Array<RouteRecordRaw> = [
           },
         ],
       },
-      UIRoute,
     ]
   },
   {

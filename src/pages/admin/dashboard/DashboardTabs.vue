@@ -1,14 +1,11 @@
 <template>
   <va-card>
     <va-card-title>
-      {{ $t('dashboard.setupRemoteConnections') }}
+      {{ $t('dashboard.setupPaymentMethod') }}
     </va-card-title>
     <va-card-content>
       <va-tabs grow v-model="activeTabName">
         <template #tabs>
-          <va-tab name="OverviewTab">
-            {{$t('dashboard.tabs.overview.title')}}
-          </va-tab>
           <va-tab name="BillingAddressTab">
             {{$t('dashboard.tabs.billingAddress.title')}}
           </va-tab>

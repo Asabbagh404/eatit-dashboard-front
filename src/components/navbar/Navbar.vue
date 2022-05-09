@@ -3,7 +3,7 @@
     <va-navbar>
       <template v-slot:left>
         <div class="left">
-          <va-icon-menu-collapsed 
+          <va-icon-menu-collapsed
             @click="isSidebarMinimized = !isSidebarMinimized"
             :class="{ 'x-flip': isSidebarMinimized }"
             class="va-navbar__item"
@@ -11,29 +11,8 @@
           />
           <router-link to="/">
             <vuestic-logo class="logo"/>
-          </router-link>          
+          </router-link>
         </div>
-      </template>
-      <template v-slot:center>
-        <span class="app-navbar__text">
-          {{$t('navbar.messageUs')}}&nbsp;
-          <a
-            href="mailto:hello@epicmax.co"
-            target="_blank"
-            :style="{color: colors.primary}"
-          >
-            hello@epicmax.co
-          </a>
-          <va-button
-            href="https://github.com/epicmaxco/vuestic-admin"
-            color="#000000"
-            class="app-navbar__github-button"
-            icon="github"
-            target="_blank"
-          >
-            {{$t('navbar.repository')}}
-          </va-button>
-        </span>
       </template>
       <template #right>
         <app-navbar-actions

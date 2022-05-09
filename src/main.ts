@@ -10,14 +10,11 @@ import vuesticGlobalConfig from './services/vuestic-ui/global-config'
 
 
 const i18nConfig = {
-  locale: 'en',
-  fallbackLocale: 'en',
+  locale: 'fr',
+  fallbackLocale: 'fr',
   messages: {
     en: require('@/i18n/en.json'),
-    cn: require('@/i18n/cn.json'),
-    es: require('@/i18n/es.json'),
-    ir: require('@/i18n/ir.json'),
-    br: require('@/i18n/br.json')
+    fr: require('@/i18n/fr.json'),
   }
 }
 

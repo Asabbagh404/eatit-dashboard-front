@@ -1,13 +1,16 @@
 <template>
   <div class="dashboard">
-    <dashboard-charts />
-    <dashboard-info-block />
+    <div class="row row-equal">
+      <div class="flex xs12 lg6">
+        <dashboard-charts />
+      </div>
+      <div class="flex xs12 lg6">
+        <dashboard-info-block />
+      </div>
+    </div>
     <div class="row row-equal">
       <div class="flex xs12 lg6">
         <dashboard-tabs @submit="addAddressToMap"/>
-      </div>
-      <div class="flex xs12 lg6">
-        <dashboard-map ref="dashboardMap"/>
       </div>
     </div>
   </div>
@@ -17,7 +20,6 @@
 import DashboardCharts from './DashboardCharts'
 import DashboardInfoBlock from './DashboardInfoBlock'
 import DashboardTabs from './DashboardTabs'
-import DashboardMap from './DashboardMap'
 
 export default {
   name: 'dashboard',
@@ -25,7 +27,6 @@ export default {
     DashboardCharts,
     DashboardInfoBlock,
     DashboardTabs,
-    DashboardMap,
   },
   methods: {
     addAddressToMap ({ city, country }) {

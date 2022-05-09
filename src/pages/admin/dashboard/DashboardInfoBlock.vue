@@ -1,103 +1,23 @@
 <template>
   <div class="row row-equal">
-    <div class="flex xl6 xs12">
-      <div class="row">
-        <div
-          class="flex xs12 sm4"
-          v-for="(info, idx) in infoTiles"
-          :key="idx"
-        >
-          <va-card class="mb-4" :color="info.color">
-            <va-card-content>
-              <p class="display-2 mb-0" style="color: white;">{{ info.value }}</p>
-              <p style="color: white;">{{$t('dashboard.info.' + info.text)}}</p>              
-            </va-card-content>
-          </va-card>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="flex xs12 md6">
-          <va-card>
-            <va-card-content>
-              <p class="display-2 mb-1" :style="{color: theme.primary}">291</p>
-              <p class="no-wrap">{{$t('dashboard.info.completedPullRequests')}}</p>              
-            </va-card-content>
-          </va-card>
-        </div>
-        <div class="flex xs12 md6">
-          <va-card>
-            <va-card-content>
-              <div class="row row-separated">
-                <div class="flex xs4">
-                  <p class="display-2 mb-1 text--center" :style="{color: theme.primary}">3</p>
-                  <p class="text--center mb-1">{{$t('dashboard.info.users')}}</p>
-                </div>
-                <div class="flex xs4">
-                  <p class="display-2 mb-1 text--center" :style="{color: theme.info}">24</p>
-                  <p class="text--center no-wrap mb-1">{{$t('dashboard.info.points')}}</p>
-                </div>
-                <div class="flex xs4">
-                  <p class="display-2 mb-1 text--center" :style="{color: theme.warning}">91</p>
-                  <p class="text--center mb-1">{{$t('dashboard.info.units')}}</p>
-                </div>
-              </div>
-            </va-card-content>
-
-          </va-card>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex xs12 md6 xl3">
-      <va-card stripe stripe-color="info"> 
+    <div class="flex xs12 md12 xl8">
+      <va-card stripe stripe-color="info">
         <va-card-title>
-          {{ $t('dashboard.info.componentRichTheme') }}
+          {{ $t('dashboard.info.previewing') }}
         </va-card-title>
         <va-card-content>
-          <p class="rich-theme-card-text">
-            Buying the right telescope to take your love of astronomy to the
-            next level is a big next step.
-          </p>
-
-
+          <va-image
+            :src="images[0]"
+            style="height: 200px;"
+          />
           <div class="mt-3">
             <va-button color="primary" target="_blank" href="https://github.com/epicmaxco/vuestic-ui">
-              {{$t('dashboard.info.viewLibrary')}}
+              {{$t('dashboard.info.visitWebsite')}}
             </va-button>
           </div>
         </va-card-content>
       </va-card>
     </div>
-
-    <div class="flex xs12 md6 xl3">
-      <va-card class="image-card">
-        <va-image
-          :src="images[0]"
-          style="height: 200px;"
-        />
-        <va-card-title>
-          <va-button
-            flat
-            icon-right="ion_arrow_forward"
-            color="primary"
-            class="ma-0"
-            @click="showModal"
-          >
-            {{$t('dashboard.info.exploreGallery')}}
-          </va-button>
-        </va-card-title>
-      </va-card>
-    </div>
-    <va-modal v-model="modal">
-      <div style="position: relative;">
-        <va-button @click="showPrevImage" color="#fff" icon="chevron-left" flat style="position: absolute; top: 50%;"/>
-        <va-button @click="showNextImage" color="#fff" icon="chevron-right" flat style="position: absolute; top: 50%; right: 0;"/>
-        <transition>
-          <img :src="images[currentImageIndex]" style="height: 50vh; max-width: 100%;">
-        </transition>
-      </div>
-    </va-modal>
   </div>
 </template>
 

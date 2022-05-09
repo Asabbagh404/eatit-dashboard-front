@@ -114,7 +114,7 @@
   },
   "dashboard": {
     "versions": "Versions",
-    "setupPaymentMethod": "Setup Remote Connections",
+    "setupPaymentMethod": "Configuration des données de payement",
     "currentVisitors": "Current Visitors",
     "charts": {
       "trendyTrends": "Trendy Trends",
@@ -125,7 +125,7 @@
       "commits": "Commits"
     },
     "info": {
-      "visitWebsite": "Visite website",
+      "visitWebsite": "visiter le site",
       "previewing": "Prévisualisation"
     },
     "table": {
@@ -271,11 +271,8 @@
     "poweredBy": "Powered by"
   },
   "language": {
-    "brazilian_portuguese": "Português",
-    "english": "English",
-    "spanish": "Spanish",
-    "simplified_chinese": "Simplified Chinese",
-    "persian": "Persian"
+    "english": "Anglais",
+    "french": "Francais"
   },
   "menu": {
     "auth": "Auth",
@@ -377,26 +374,26 @@
   },
   "chips": {
     "chips": {
-    "title": "Chips",
-    "primary": "Primary chip",
-    "secondary": "Secondary chip",
-    "success": "Success chip",
-    "info": "Info chip",
-    "danger": "Danger chip",
-    "warning": "Warning chip",
-    "gray": "Gray chip",
-    "dark": "Dark chip"
+      "title": "Chips",
+      "primary": "Primary chip",
+      "secondary": "Secondary chip",
+      "success": "Success chip",
+      "info": "Info chip",
+      "danger": "Danger chip",
+      "warning": "Warning chip",
+      "gray": "Gray chip",
+      "dark": "Dark chip"
     },
     "badges": {
-    "title": "Badges",
-    "primary": "Primary badge",
-    "secondary": "Secondary badge",
-    "success": "Success badge",
-    "info": "Info badge",
-    "danger": "Danger badge",
-    "warning": "Warning badge",
-    "gray": "Gray badge",
-    "dark": "Dark badge"
+      "title": "Badges",
+      "primary": "Primary badge",
+      "secondary": "Secondary badge",
+      "success": "Success badge",
+      "info": "Info badge",
+      "danger": "Danger badge",
+      "warning": "Warning badge",
+      "gray": "Gray badge",
+      "dark": "Dark badge"
     }
   },
   "notifications": {

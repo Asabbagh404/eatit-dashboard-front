@@ -1,6 +1,6 @@
 <template>
   <div class="row row-equal">
-    <div class="flex xs12 xl6">
+    <div class="flex xs12 xl12">
       <va-card v-if="lineChartData">
         <va-card-title>
           <h1>{{ $t('dashboard.charts.trendyTrends') }}</h1>
@@ -20,29 +20,7 @@
         </va-card-content>
       </va-card>
     </div>
-
     <div class="flex xs12 md6 xl3">
-      <va-card class="d-flex">
-        <va-card-title>
-          <h1>{{ $t('dashboard.charts.loadingSpeed') }}</h1>
-          <div class="mr-0 text-right">
-            <va-button
-              icon="print"
-              flat
-              class="mr-0"
-              @click="printChart"
-            />
-          </div>
-
-        </va-card-title>
-        <va-card-content v-if="donutChartData">
-          <va-chart class="chart chart--donut" :data="donutChartData" type="donut"/>
-        </va-card-content>
-      </va-card>
-    </div>
-
-    <div class="flex xs12 md6 xl3">
-      <dashboard-contributors-chart/>
     </div>
   </div>
 </template>
@@ -51,12 +29,11 @@
 import { getDonutChartData } from '@/data/charts/DonutChartData'
 import { getLineChartData } from '@/data/charts/LineChartData'
 import VaChart from '@/components/va-charts/VaChart.vue'
-import DashboardContributorsChart from './DashboardContributorsList'
 import { useGlobalConfig } from 'vuestic-ui'
 
 export default {
   name: 'dashboard-charts',
-  components: { DashboardContributorsChart, VaChart },
+  components: { VaChart },
   data () {
     return {
       lineChartData: null,
